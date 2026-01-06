@@ -1,0 +1,66 @@
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background-color: #fcfcfc; 
+    color: #1e293b; 
+    scroll-behavior: smooth; 
+}
+
+.bg-mesh {
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(66, 133, 244, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(52, 168, 83, 0.1) 0px, transparent 50%);
+}
+
+.bento-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.1), 0 18px 36px -18px rgba(0, 0, 0, 0.1);
+}
+
+.google-gradient {
+    background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.img-overlay {
+
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+#photo-grid {
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+}
+
+#photo-grid:active {
+    cursor: grabbing;
+}
+
+/* Ensure each image card keeps its width in the flex row */
+.gallery-item {
+    flex: 0 0 350px; /* Width of each image */
+    scroll-snap-align: start;
+}
+
+/* Ensure event cards keep their width in the slider */
+.event-card {
+    flex: 0 0 350px; /* Adjust this width as you like */
+    scroll-snap-align: start;
+}
+
+/* Re-using the no-scrollbar from before */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
